@@ -1,13 +1,13 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const cryptoApiHeaders = {
+const cryptoHeaders = {
   'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
   'x-rapidapi-key': 'c651a95afcmshc12cef227bb73c6p158358jsn0899fa7daf23',
 };
 
-const baseUrl = 'https://coinranking1.p.rapidapi.com/';
+const baseUrl = 'https://coinranking1.p.rapidapi.com';
 
-const cryptoRequest = (url) => ({ url, headers: cryptoApiHeaders });
+const cryptoRequest = (url) => ({ url, headers: cryptoHeaders });
 
 export const cryptoApi = createApi({
   reducerPath: 'cryptoApi',
