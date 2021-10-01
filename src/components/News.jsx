@@ -50,21 +50,18 @@ const News = ({ simplified }) => {
                     {news.name}
                   </Title>
                   <img
-                    style={{ maxWidth: '200px', maxHeight: '100px' }}
+                    style={{ maxWidth: '200px', maxHeight: '100px', marginLeft: '10px' }}
                     src={news?.image?.thumbnail?.contentUrl || demoImage}
                     alt="news"
                   />
                 </div>
-                <p>
-                  {news.description > 50
-                    ? `${news.description.substring(0, 50)}...`
-                    : news.description}
-                </p>
+                <p>{news.description}</p>
                 <div className="provider-container">
                   <div>
                     <Avatar
                       src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImage}
                       alt="news"
+                      style={{ marginRight: '5px' }}
                     />
                     <Text>{news.provider[0]?.name}</Text>
                   </div>

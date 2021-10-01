@@ -288,7 +288,7 @@ a:hover {
   width: 180px;
 }
 .news-card {
-  min-height: 300px !important;
+  min-height: 200px;
 }
 .news-image-container {
   display: flex !important;
@@ -296,6 +296,11 @@ a:hover {
 }
 .news-title {
   width: 70%;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .news-image-container .img {
@@ -305,6 +310,11 @@ a:hover {
 .news-card p {
   color: black;
   margin: 10px 0px !important;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 .provider-container {
   display: flex;
