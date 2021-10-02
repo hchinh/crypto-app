@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { Select, Typography, Row, Col, Avatar, Card } from 'antd';
+import { Avatar, Card, Col, Row, Select, Typography } from 'antd';
 import moment from 'moment';
-import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
+import React, { useState } from 'react';
+import { Loading } from '../components';
 import { useGetCryptosQuery } from '../services/cryptoApi';
+import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -17,7 +18,7 @@ const News = ({ simplified }) => {
     count: simplified ? 6 : 12,
   });
 
-  if (!cryptoNews?.value) return 'Loading...';
+  if (!cryptoNews?.value) return <Loading />;
 
   return (
     <>

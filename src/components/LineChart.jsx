@@ -1,6 +1,6 @@
+import { Col, Row, Typography } from 'antd';
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import { Row, Col, Typography } from 'antd';
 
 const { Title } = Typography;
 

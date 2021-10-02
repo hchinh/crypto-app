@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import millify from 'millify';
-import HTMLReactParser from 'html-react-parser';
-import { Row, Col, Typography, Select } from 'antd';
-import { useParams } from 'react-router-dom';
-import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/cryptoApi';
 import {
-  MoneyCollectOutlined,
-  DollarCircleOutlined,
-  FundOutlined,
-  ExclamationCircleOutlined,
-  StopOutlined,
-  TrophyOutlined,
   CheckOutlined,
+  DollarCircleOutlined,
+  ExclamationCircleOutlined,
+  FundOutlined,
+  MoneyCollectOutlined,
   NumberOutlined,
+  StopOutlined,
   ThunderboltOutlined,
+  TrophyOutlined,
 } from '@ant-design/icons';
-import { LineChart } from '../components';
+import { Col, Row, Select, Typography } from 'antd';
+import HTMLReactParser from 'html-react-parser';
+import millify from 'millify';
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { LineChart, Loading } from '../components';
+import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/cryptoApi';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -28,7 +28,7 @@ const CryptoDetails = () => {
 
   const cryptoDetails = data?.data?.coin;
 
-  if (isFetching) return 'Loading...';
+  if (isFetching) return <Loading />;
 
   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
 
