@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
 const Cryptocurrencies = ({ simplified }) => {
-  const count = simplified ? 10 : 100;
+  const count = simplified ? 12 : 100;
   const { data: cryptos, isFetching } = useGetCryptosQuery(count);
   const [cryptoList, setCryptoList] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
