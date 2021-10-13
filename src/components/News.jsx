@@ -24,7 +24,7 @@ const News = ({ simplified }) => {
     <>
       <Row gutter={[24, 24]}>
         {!simplified && (
-          <Col span={24}>
+          <Col span={24} style={{ textAlign: 'center' }}>
             <Select
               showSearch
               className="select-news"

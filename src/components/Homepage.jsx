@@ -1,4 +1,11 @@
-import { Col, Row, Statistic, Typography } from 'antd';
+import {
+  BarChartOutlined,
+  CarryOutOutlined,
+  DashboardOutlined,
+  DollarCircleOutlined,
+  GlobalOutlined,
+} from '@ant-design/icons';
+import { Col, Row, Typography } from 'antd';
 import millify from 'millify';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -19,21 +26,61 @@ const Homepage = () => {
       <Title level={2} className="heading">
         Crypto Global Stats
       </Title>
-      <Row>
-        <Col span={12}>
-          <Statistic title="Total Cryptocurrencies" value={globalStats.total} />
+      <Row gutter={[15, 15]}>
+        <Col span={6}>
+          <div className="status-card">
+            <div className="status-card__icon">
+              <BarChartOutlined />
+            </div>
+            <div className="status-card__info">
+              <h4>{globalStats.total}</h4>
+              <span>Total Cryptocurrencies</span>
+            </div>
+          </div>
         </Col>
-        <Col span={12}>
-          <Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)} />
+        <Col span={6}>
+          <div className="status-card">
+            <div className="status-card__icon">
+              <CarryOutOutlined />
+            </div>
+            <div className="status-card__info">
+              <h4>{millify(globalStats.totalExchanges)}</h4>
+              <span>Total Exchanges</span>
+            </div>
+          </div>
         </Col>
-        <Col span={12}>
-          <Statistic title="Total Market Cap" value={millify(globalStats.totalMarketCap)} />
+        <Col span={6}>
+          <div className="status-card">
+            <div className="status-card__icon">
+              <DollarCircleOutlined />
+            </div>
+            <div className="status-card__info">
+              <h4>{millify(globalStats.totalMarketCap)}</h4>
+              <span>Total Market Cap</span>
+            </div>
+          </div>
         </Col>
-        <Col span={12}>
-          <Statistic title="Total 24h Volume" value={millify(globalStats.total24hVolume)} />
+        <Col span={6}>
+          <div className="status-card">
+            <div className="status-card__icon">
+              <DashboardOutlined />
+            </div>
+            <div className="status-card__info">
+              <h4>{millify(globalStats.total24hVolume)}</h4>
+              <span>Total 24h Volume</span>
+            </div>
+          </div>
         </Col>
-        <Col span={12}>
-          <Statistic title="Total Markets" value={millify(globalStats.totalMarkets)} />
+        <Col span={6}>
+          <div className="status-card">
+            <div className="status-card__icon">
+              <GlobalOutlined />
+            </div>
+            <div className="status-card__info">
+              <h4>{millify(globalStats.totalMarkets)}</h4>
+              <span>Total Markets</span>
+            </div>
+          </div>
         </Col>
       </Row>
       <div className="home-heading-container">
