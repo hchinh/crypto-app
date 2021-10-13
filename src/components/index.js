@@ -6,3 +6,4 @@ export { default as LineChart } from './LineChart';
 export { default as Loading } from './Loading';
 export { default as Navbar } from './Navbar';
 export { default as News } from './News';
+export { default as BannerSlider } from './BannerSlider';

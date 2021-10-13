@@ -41,6 +41,27 @@ a:hover {
   background-color: rgb(0, 21, 41);
 }
 
+.banner {
+  height: 50vh;
+  width: 1226px;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider-image {
+  width: 1226px;
+  height: 320px;
+  object-fit: cover;
+}
+
+.slick-arrow.slick-prev {
+  display: none !important;
+}
+
+.slick-arrow.slick-next {
+  display: none !important;
+}
+
 .logo-container {
   background-color: #001529;
   display: flex;

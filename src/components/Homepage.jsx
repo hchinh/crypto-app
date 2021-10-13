@@ -2,7 +2,7 @@ import { Col, Row, Statistic, Typography } from 'antd';
 import millify from 'millify';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cryptocurrencies, Loading, News } from '../components';
+import { BannerSlider, Cryptocurrencies, Loading, News } from '../components';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
 const { Title } = Typography;
@@ -15,6 +15,7 @@ const Homepage = () => {
 
   return (
     <>
+      <BannerSlider />
       <Title level={2} className="heading">
         Crypto Global Stats
       </Title>
