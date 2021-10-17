@@ -1,11 +1,11 @@
 export const SliderData = [
   {
-    image: 'https://www.cryptomarketads.com/storage/cover_logo/151.png',
+    image: 'https://www.stopsaving.com/wp-content/uploads/2021/04/crypto-investment-strategy-1.jpg',
   },
   {
-    image: 'https://cdn.pixabay.com/photo/2020/05/26/14/25/banner-5223279_960_720.jpg',
+    image: 'https://insuranceasianews.com/wp-content/uploads/2021/03/crypto-bitcoin--880x540.jpg',
   },
   {
-    image: 'https://masterjitips.com/wp-content/uploads/2021/02/what-is-blockchain.jpg',
+    image: 'https://thitrancrypto.com/wp-content/uploads/2021/06/Bitcoin-khong-the-thanh-cong.jpg',
   },
 ];
