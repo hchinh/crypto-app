@@ -1,10 +1,19 @@
 import React from 'react';
-import { Spin } from 'antd';
 
 const Loading = () => {
   return (
     <div className="loader">
-      <Spin />
+      <div class="dots">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   );
 };
